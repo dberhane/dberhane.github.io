@@ -36,8 +36,8 @@
     <meta name="twitter:creator" content="@bmj">
     <meta property="og:type" content="website" />
 
-    <meta property="og:url" content="http://localhost:4000" />
-    <link rel="canonical" href="http://localhost:4000" />
+    <meta property="og:url" content="https://dberhane.github.io" />
+    <link rel="canonical" href="https://dberhane.github.io" />
 
     <title>analytics.bmj.gov | BMJ's web traffic.</title>
     <meta property="og:title" content="analytics.bmj.gov | BMJ's web traffic." />
@@ -47,7 +47,7 @@
     <meta property="og:description" content="Official data on web traffic to selected BMJ websites. Published by the BMJ Tech." />
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="http://localhost:4000/images/share-image.png" />
+    <meta property="og:image" content="https://dberhane.github.io/images/share-image.png" />
     <script src="/js/vendor/d3.v3.min.js"></script>
 
     <script>
@@ -111,7 +111,7 @@
             </h1>
             <ul class="links">
               <li><a href="#explanation">About <span class="sm-hide">this site</span></a></li>
-              <li><a href="http://localhost:4000/data/">Data</a></li>
+              <li><a href="https://dberhane.github.io/data/">Data</a></li>
             </ul>
             
             
@@ -216,7 +216,7 @@
 
         <section id="realtime"
           data-block="realtime"
-          data-source="https://analytics.usa.gov/data/live/realtime.json"
+          data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/realtime.json"
           data-refresh="15">
           <h2 id="current_visitors" class="data">...</h2>
           <div class="chart_subtitle">people on BMJ websites now</div>
@@ -228,7 +228,7 @@
         </section>
         <section id="time_series"
           data-block="today"
-          data-source="https://analytics.usa.gov/data/live/today.json"
+          data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/today.json"
           data-refresh="15">
           <svg class="data time-series">
           </svg>
@@ -244,7 +244,7 @@
 
         <section id="devices" class="three_column"
           data-block="devices"
-          data-source="https://analytics.usa.gov/data/live/devices.json">
+          data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/devices.json">
           <h4>Devices</h4>
           <figure id="chart_device_types">
             <div class="data bar-chart">
@@ -265,14 +265,14 @@
 
           <figure id="chart_browsers"
             data-block="browsers"
-            data-source="https://analytics.usa.gov/data/live/browsers.json">
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/browsers.json">
             <div class="data bar-chart">
             </div>
           </figure>
 
           <figure id="chart_ie"
             data-block="ie"
-            data-source="https://analytics.usa.gov/data/live/ie.json"
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/ie.json"
             data-scale-to-parent="true">
             <h4>Internet Explorer</h4>
             <div class="data bar-chart">
@@ -285,14 +285,14 @@
 
           <figure id="chart_os"
             data-block="os"
-            data-source="https://analytics.usa.gov/data/live/os.json">
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/os.json">
             <div class="data bar-chart">
             </div>
           </figure>
 
           <figure id="chart_windows"
             data-block="windows"
-            data-source="https://analytics.usa.gov/data/live/windows.json"
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/windows.json"
             data-scale-to-parent="true">
             <h4>Windows</h4>
             <div class="data bar-chart">
@@ -309,7 +309,7 @@
 
         <section id="cities" class="three_column"
           data-block="cities"
-          data-source="https://analytics.usa.gov/data/live/top-cities-realtime.json">
+          data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/top-cities-realtime.json">
           <h4>Cities</h4>
           <figure id="chart_top-cities-90-days">
             <div class="data bar-chart">
@@ -322,14 +322,14 @@
 
           <figure id="chart_us"
             data-block="countries"
-            data-source="https://analytics.usa.gov/data/live/top-countries-realtime.json">
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/top-countries-realtime.json">
             <div class="data bar-chart">
             </div>
           </figure>
 
           <figure id="chart_countries"
             data-block="international_visits"
-            data-source="https://analytics.usa.gov/data/live/top-countries-realtime.json">
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/top-countries-realtime.json">
             <h4>International</h4>
             <div class="data bar-chart">
             </div>
@@ -351,11 +351,11 @@
 
           <figure class="top-pages" id="top-pages-realtime" role="tabpanel"
             data-block="top-pages-realtime"
-            data-source="https://analytics.usa.gov/data/live/top-pages-realtime.json"
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/top-pages-realtime.json"
             data-refresh="15">
             <h5><em>
               People on a <strong>single, specific page</strong> now. 
-              <a href="https://analytics.usa.gov/data/live/all-pages-realtime.csv">Download the full dataset.</a>
+              <a href="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/all-pages-realtime.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">
             </div>
@@ -363,7 +363,7 @@
 
           <figure class="top-pages" id="top-pages-7-days" role="tabpanel"
             data-block="top-pages"
-            data-source="https://analytics.usa.gov/data/live/top-domains-7-days.json">
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/top-domains-7-days.json">
             <h5><em>Visits over the last week to <strong>domains</strong>, including traffic to all pages within that domain.</em></h5>
             <div class="data bar-chart">
             </div>
@@ -371,10 +371,10 @@
 
           <figure class="top-pages" id="top-pages-30-days" role="tabpanel"
             data-block="top-pages"
-            data-source="https://analytics.usa.gov/data/live/top-domains-30-days.json">
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/top-domains-30-days.json">
             <h5><em>
               Visits over the last month to <strong>domains</strong>, including traffic to all pages within that domain. 
-              <a href="https://analytics.usa.gov/data/live/top-domains-30-days.csv">Download the full dataset.</a>
+              <a href="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/top-domains-30-days.csv">Download the full dataset.</a>
             </em></h5>
             <div class="data bar-chart">
             </div>
@@ -388,7 +388,7 @@
           <h5><em>Total file downloads yesterday on BMJ domains.</em></h5>
           <figure id="top-downloads"
             data-block="top-downloads"
-            data-source="https://analytics.usa.gov/data/live/top-downloads-yesterday.json">
+            data-source="https://s3-eu-west-1.amazonaws.com/bmj-analytics-dashboard/data/top-downloads-yesterday.json">
             <div class="data bar-chart">
             </div>
           </figure>
@@ -408,7 +408,7 @@
           </p>
 <h3>Benefit &amp; Motivation</h3>
           <p>
-            We've more than 100 Google Analytics accounts for our websites & apps, and by default the way our GA accounts are set-up, metrics reporting is done on site/product basis and there is a disconnect what really is happening across all our sites / products. A single universal analytics dashboard view would help us to bridge this disconnect and have some broad overview of near real-time (up to a minute updated) how users are interacting with our sites and products.
+            We've 100's of Google Analytics accounts for our websites & apps, and by default the way our GA accounts are set-up, metrics reporting is done on site/product basis and there is a disconnect what really is happening across all our sites / products. A single universal analytics dashboard view would help us to bridge this disconnect and have some broad overview of near real-time (up to a minute updated) how users are interacting with our sites and products.
 For example, as part of the dashboard, we could create a panel for top trending article views or search term or topics. This may allow Marketing to identify trending page and do some near real-time ad targeting. 
 </p>
 
@@ -423,7 +423,7 @@ For example, as part of the dashboard, we could create a panel for top trending 
       </section>
       <section class="width-one-third">
         <h3>Download the data</h3>
-        <p>You can <a href="http://localhost:4000/data/">download the data here.</a> Available in JSON and CSV format.</p>
+        <p>You can <a href="https://dberhane.github.io/data/">download the data here.</a> Available in JSON and CSV format.</p>
       </section>
 </div>
 
